@@ -6,7 +6,7 @@ import Body from "./components/Body";
 import { State, ActionKind, Action } from "./logic/types";
 
 function App() {
-  const initialState: State = { location: "Helsinki", guests: 1 };
+  const initialState: State = { location: "", guests: 0 };
   function myReducer(state: State, action: Action): State {
     const { type, payload } = action;
     switch (type) {

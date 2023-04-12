@@ -2,6 +2,7 @@ import "../styles/body.css";
 import Module from "./Module";
 import stays from "../logic/stays.json";
 import { State } from "../logic/types";
+import { useState } from "react";
 
 const Body = ({
   hideNav,
@@ -14,7 +15,10 @@ const Body = ({
 }): JSX.Element => {
   let filteredStays = [];
   filteredStays = stays.filter((stay) => {
-    return stay.city === state.location && stay.maxGuests >= state.guests;
+    return (
+      state.location === "" ||
+      (stay.city === state.location && stay.maxGuests >= state.guests)
+    );
   });
   return (
     <div
