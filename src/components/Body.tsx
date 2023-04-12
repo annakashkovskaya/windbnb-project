@@ -1,16 +1,33 @@
 import "../styles/body.css";
 import Module from "./Module";
 import stays from "../logic/stays.json";
+import { State } from "../logic/types";
 
-const Body = (): JSX.Element => {
+const Body = ({
+  hideNav,
+  state,
+  color,
+}: {
+  hideNav: () => void;
+  state: State;
+  color: number;
+}): JSX.Element => {
+  let filteredStays = [];
+  filteredStays = stays.filter((stay) => {
+    return stay.city === state.location && stay.maxGuests >= state.guests;
+  });
   return (
-    <div className="body-content">
+    <div
+      className="body-content"
+      onClick={hideNav}
+      style={{ filter: `brightness(${color}%)` }}
+    >
       <div className="body-content_title">
         <h2>Stays in Finland</h2>
-        <p>8+ stays</p>
+        <p>{filteredStays.length} stays</p>
       </div>
       <div className="body-content_options">
-        {stays.slice(0, 6).map((stay, i) => {
+        {filteredStays.map((stay, i) => {
           return (
             <Module
               key={i}

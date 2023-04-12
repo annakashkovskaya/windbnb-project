@@ -1,7 +1,14 @@
+.body-content {
+  background-color: #ffff;
+  width: 100vw;
+  height: 100vh;
+}
+
 .body-content_title {
   display: flex;
   justify-content: space-between;
   margin: 1rem 5rem;
+  position: relative;
 }
 .body-content_title h2 {
   font-family: "Montserrat";
@@ -23,7 +30,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1rem 5rem;
+  margin: 2rem 5rem;
   gap: 1rem;
 }
 @media screen and (max-width: 600px) {
