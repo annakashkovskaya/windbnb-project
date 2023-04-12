@@ -22,7 +22,10 @@ const Header = ({
       </div>
       <div className="header-content_nav" onClick={showNav}>
         <div className="header-content_nav-place">
-          <p>{state.location},Finland</p>
+          <p>
+            {state.location}
+            {state.location === "" ? "Finland" : ",Finland"}
+          </p>
         </div>
         <div className="line"></div>
         <div className="header-content_nav-guests">
