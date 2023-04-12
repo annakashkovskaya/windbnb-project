@@ -1,0 +1,64 @@
+.nav-content_info-location_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 2rem;
+}
+.nav-content_info-location_list-item {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  background-color: #ffff;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.nav-content_info-location_list-item p {
+  font-family: "Muli";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4f4f4f;
+}
+
+.nav-content_info-location_header {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.nav-content_info-location_header p {
+  margin-bottom: 0.5rem;
+  font-family: "Muli";
+  font-weight: 800;
+  font-size: 9px;
+  line-height: 11px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.nav-content_info-location_header input {
+  font-family: "Muli";
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+
+.nav-content_info-location_list-item:hover {
+  filter: brightness(90%);
+  box-shadow: 10px 10px 10px #bab7b7;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-content_info-location_list-item {
+    gap: 0.1rem;
+    margin: 0.5rem 0;
+    background-color: #ffff;
+    padding: 0.2rem;
+    max-width: max-content;
+  }
+  .nav-content_info-location_list-item p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

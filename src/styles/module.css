@@ -31,7 +31,9 @@
 }
 .module-content_info-super {
   border: 1px solid #4f4f4f;
-  border-radius: 16px;
+  border-radius: 12px;
+  width: fit-content;
+  height: min-content;
 }
 .module-content_info-super p {
   font-family: "Montserrat";

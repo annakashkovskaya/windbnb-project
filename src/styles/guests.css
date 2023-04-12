@@ -1,0 +1,79 @@
+.guests-content_header {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.guests-content_header p {
+  margin-bottom: 0.5rem;
+  font-family: "Muli";
+  font-weight: 800;
+  font-size: 9px;
+  line-height: 11px;
+  text-transform: uppercase;
+  color: #333333;
+  cursor: pointer;
+}
+.guests-content_header input {
+  font-family: "Muli";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #bdbdbd;
+  border: none;
+  width: 3rem;
+}
+
+.counter-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.counter-content_age {
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+}
+.counter-content_age h4 {
+  color: #333333;
+}
+.counter-content_age p {
+  color: #bdbdbd;
+}
+.counter-content_buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.counter-content_buttons button {
+  border: 1px solid #828282;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #ffff;
+  cursor: pointer;
+}
+
+.btn-increase:hover,
+.btn-decrease:hover {
+  box-shadow: 5px 5px 5px #cfcccc;
+  border: 1px solid #393838;
+}
+
+@media screen and (max-width: 600px) {
+  .counter-content_age {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .counter-content_buttons button {
+    padding: 3px;
+  }
+  .counter-content_buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+  }
+}
